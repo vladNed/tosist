@@ -9,7 +9,7 @@ class Note(Base):
     """
     Table keeping all the notes in a notebook
     """
-    __tablename__="notes"
+    __tablename__ = "notes"
 
     reference = Column(Integer, primary_key=True, index=True)
     title = Column(String, unique=True, nullable=False)

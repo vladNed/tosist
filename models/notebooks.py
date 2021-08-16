@@ -2,7 +2,7 @@ from typing import List, Optional
 from datetime import datetime
 from sqlalchemy import Column
 from sqlalchemy import Integer, String, DateTime
-from sqlalchemy.orm import relationship, Session
+from sqlalchemy.orm import relationship
 from sqlalchemy.orm.session import Session
 
 import db.database
@@ -13,7 +13,7 @@ class Notebook(db.database.Base):
     """
     Model keeping all the notbooks
     """
-    __tablename__="notebooks"
+    __tablename__ = "notebooks"
 
     reference = Column(Integer, primary_key=True, index=True)
     title = Column(String, unique=True, index=True, nullable=False)
